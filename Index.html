@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>
+            Profile 
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./profile.css">
+        <style>
+            body{
+                background-color: lightblue;
+                background-image: none;
+            }
+            #img{
+                position: absolute;
+                top: 0%;
+                width: 70rem;
+                height: 70rem;
+            }
+            .rig{
+                position: absolute;
+                top: 35%;
+                left: 55%;
+                /* display: flex; */
+                width: 60rem;
+                height: 50rem;
+            }
+            .rig h1,p{
+                color: rgb(3, 3, 126);
+                
+            }
+            .rig h1{
+                font-family: monospace;
+                font-size: 8rem;
+
+            }
+            .rig p{
+                font-family: "cursive";
+                font-size: 4rem;
+            }
+            
+            #logd{
+                position: absolute;
+                top: 25px;
+                left: 100%;
+                background-color: rgba(0, 0, 255, 0);
+                border: none;
+            }
+            #lo{
+                font-size: 20px;
+            }
+            hr{
+                border: 1px solid black;
+                margin-top: 90px;
+            }
+            
+        </style>
+      </head>
+      <body>            
+      <div class="container">
+        
+        <img id="company" src="./Company.jpeg" />
+        <!-- <h4 id="logdin">Logged in as<script>document.write(localStorage.getItem('name'));</script></h4> -->
+      </div>      
+
+<!-- start header -->
+<nav>
+  
+	<ul> 
+  <div id="menu" class="col-md-10">
+    <button id="logd"><a id="lo" href="./login.html">Login</a></button>	
+  </div>
+	</ul>
+</nav>
+      <div>
+        <img id="img" src="./tree.png" />
+      </div>
+      <div class="rig">
+        <!-- <img src="./open.jpeg"/> -->
+        <h1>Open Call...!</h1>
+        <p>For Company Collaboration</p>
+      </div>
+      </body>
+      </html>
+      

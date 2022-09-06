@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>
+            Profile 
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./profile.css">
+      </head>
+      <body>
+      
+      <div class="container">
+        
+        <img id="company" src="./Company.jpeg" />
+        <h4 id="logdin">Logged in as<script>document.write(localStorage.getItem('name'));</script></h4>
+      </div>
+
+
+
+
+
+
+
+      
+
+<!-- start header -->
+<nav>
+  
+	<ul> 
+  <div id="menu" class="col-md-10">
+    
+		<li id="logot"><a href="./login.html"><button id="butto" onclick="Logout();" style="float: right;">Logout</button></a></li>
+        <li id="hom"><a href="./Home.html">Home</a></li>
+        <li id="prof"><a href="./profile.html">Profile</a></li>
+    	
+
+		
+  </div>
+	</ul>
+</nav>
+
+
+<div id="block">
+    <input id="inputField" type="text"><button id="addToDo">Post</button>
+    <div class="to-dos" id="toDoContainer">
+    </div>
+</div>
+
+
+
+      
+      </body>
+      <script>
+
+
+let addToDoButton = document.getElementById('addToDo');
+let toDoContainer = document.getElementById('toDoContainer');
+let inputField = document.getElementById('inputField');
+
+addToDoButton.addEventListener('click', function(){
+    var paragraph = document.createElement('p');
+    paragraph.classList.add('paragraph-styling');
+    paragraph.innerText = inputField.value;
+    toDoContainer.appendChild(paragraph);
+    inputField.value = "";
+    paragraph.addEventListener('click', function(){
+        paragraph.style.textDecoration = "line-through";
+    })
+    paragraph.addEventListener('dblclick', function(){
+        toDoContainer.removeChild(paragraph);
+    })
+})
+
+
+
+
+
+
+
+
+
+        function post(){
+            
+
+            let input = document.getElementById("inputfield").value;
+            console.log(input);
+        document.getElementById("work").innerHTML = input;
+
+        }
+        
+        let name=localStorage.getItem('name')?localStorage.getItem('name'):''
+        console.log(name);
+        if(name=='')
+        {
+          alert('U need to login first');
+          window.location.href="localstorage-part3.html";
+        }
+        function Logout()
+        {
+          localStorage.removeItem('name');
+          localStorage.removeItem('email');
+          window.location.href="localstorage-part3.html";
+        }
+  </script>
+      </html>
+      

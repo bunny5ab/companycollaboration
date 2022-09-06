@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Profile_page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./profile.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header>
+
+	<div class="container">
+        
+        <img id="company" src="./Company.jpeg" />
+        <h4 id="logdin">Logged in as<script>document.write(localStorage.getItem('name'));</script></h4>
+      </div>
+
+
+
+
+
+
+
+      
+
+<!-- start header -->
+<nav>
+  
+	<ul> 
+  <div id="menu" class="col-md-10">
+    
+		<!-- <li id="logot"><a href="./login.html"><button id="butto" onclick="Logout();" style="float: right;">Logout</button></a></li> -->
+        <li id="hom"><a href="./Home.html">Home</a></li>
+        <li id="prof"><a href="./profile.html">Profile</a></li>
+    	
+
+		
+  </div>
+	</ul>
+</nav>
+
+	<div class="container">
+
+		<div class="profile">
+
+			<div class="profile-image">
+
+				<img src="data:image/jpeg;base64,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" alt="">
+
+			</div>
+
+			<div class="profile-user-settings">
+
+				<h1 class="profile-user-name">Nameta_Navyasree</h1>
+
+				<button class="btn profile-edit-btn">Edit Profile</button>
+
+				<button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog" aria-hidden="true"></i></button>
+
+			</div>
+
+			<div class="profile-stats">
+
+				<ul>
+					<li><span class="profile-stat-count">12</span> posts</li>
+					<li><span class="profile-stat-count">100</span> followers</li>
+					<li><span class="profile-stat-count">200</span> following</li>
+				</ul>
+				<ul>
+					<button>Follow</button>
+				</ul>
+
+			</div>
+
+			<div class="profile-bio">
+
+				<p><span class="profile-real-name">Business Account:</span> “It all starts with a great idea and teamwork.”</p>
+
+			</div>
+
+		</div>
+		<!-- End of profile section -->
+
+	</div>
+	<!-- End of container -->
+
+</header>
+
+<main>
+
+	<div class="container">
+
+		<div class="gallery">
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://media-exp1.licdn.com/dms/image/C560BAQEKdlAwlMYRlQ/company-logo_200_200/0/1580378834807?e=2147483647&v=beta&t=ZoWXAVmuwTAX4JMlIhaCjFzabMqrqlZl30U_fbrgHNY" class="gallery-image" alt="">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 56</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 2</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7GhJw0D_XVyPC9_-tJJDEwMypTrNW0u28iA&usqp=CAU" class="gallery-image" alt="">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 89</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 5</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDe7Tj7tcrQdPG9Qd6a-EodZvbquOYbHHsGA&usqp=CAU" class="gallery-image" alt="">
+
+				<div class="gallery-item-type">
+
+					<span class="visually-hidden">Gallery</span><i class="fas fa-clone" aria-hidden="true"></i>
+
+				</div>
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 42</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 1</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Ou2qAyr829nfe-qsRyU-EF0lw5QnIf2_1g&usqp=CAU" class="gallery-image" alt="">
+
+				<div class="gallery-item-type">
+
+					<span class="visually-hidden">Video</span><i class="fas fa-video" aria-hidden="true"></i>
+
+				</div>
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 38</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 0</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="http://1.bp.blogspot.com/-8cCPMHsmYcs/VonlTaV89aI/AAAAAAAAAZg/UTv2gukBk1k/s1600/CSR%2BUPDATE.jpg" class="gallery-image" alt="">
+
+				<div class="gallery-item-type">
+
+					<span class="visually-hidden">Gallery</span><i class="fas fa-clone" aria-hidden="true"></i>
+
+				</div>
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 47</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 1</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://www.investopedia.com/thmb/NaeL0Xe_xGhTKW1ph4i51pXQxJA=/722x722/smart/filters:no_upscale()/Partnership-final-3bbce4d908bf415d8264398949b6566e.png" class="gallery-image" alt="">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 94</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 3</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://blog.bit.ai/wp-content/uploads/2018/06/Collaboration-Stat-11-bit.ai_.png" class="gallery-image" alt="">
+
+				<div class="gallery-item-type">
+
+					<span class="visually-hidden">Gallery</span><i class="fas fa-clone" aria-hidden="true"></i>
+
+				</div>
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 52</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 4</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3hl8AUx_GqLTeFjmtcSzgMtLIHPONfWW0ww&usqp=CAU" class="gallery-image" alt="">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 66</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 2</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNOAP_qAgHAk9qNTmc111LaOisj6pCUjThgg&usqp=CAU" class="gallery-image" alt="">
+
+				<div class="gallery-item-type">
+
+					<span class="visually-hidden">Gallery</span><i class="fas fa-clone" aria-hidden="true"></i>
+
+				</div>
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 45</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 0</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzOg0eaUEZZmXWB--AXd2CD0vloqBgJrl22A&usqp=CAU" class="gallery-image" alt="">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 34</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 1</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHmjq9bMmTl2Q-rdCEuNpuus6xVLDt_GLKvA&usqp=CAU" class="gallery-image" alt="">
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 41</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 0</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="gallery-item" tabindex="0">
+
+				<img src="https://www.gstsuvidhacenters.com/WebsiteAssets/images/Services/Partnership.png" class="gallery-image" alt="">
+
+				<div class="gallery-item-type">
+
+					<span class="visually-hidden">Video</span><i class="fas fa-video" aria-hidden="true"></i>
+
+				</div>
+
+				<div class="gallery-item-info">
+
+					<ul>
+						<li class="gallery-item-likes"><span class="visually-hidden">Likes:</span><i class="fas fa-heart" aria-hidden="true"></i> 30</li>
+						<li class="gallery-item-comments"><span class="visually-hidden">Comments:</span><i class="fas fa-comment" aria-hidden="true"></i> 2</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div>
+		<!-- End of gallery -->
+
+		<div class="loader"></div>
+
+	</div>
+	<!-- End of container -->
+
+</main>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
